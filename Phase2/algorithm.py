@@ -1,9 +1,9 @@
 import numpy as np
 
 class QLAgent:
-    def __init__(self, learning_rate=0.8, decay_factor=0.5, gamma=0.9):
-        self.Q = np.zeros((7, 21, 2), dtype=float)  
-        self.actions = [0, 1]  
+    def __init__(self, learning_rate=0.1, decay_factor=0.9, gamma=0.95):
+        self.Q = np.zeros((7, 21, 2), dtype=float)
+        self.actions = [0, 1]
         self.learning_rate = learning_rate
         self.decay_factor = decay_factor
         self.gamma = gamma
